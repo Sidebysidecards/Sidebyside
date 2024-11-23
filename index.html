@@ -22,14 +22,14 @@
             top: env(safe-area-inset-top, 0); /* Adjusts for the safe area on pages */
             left: 0;
             width: 100%;
-            height: calc(120px + env(safe-area-inset-top, 0)); /* Adjust as needed */
+            height: calc(75% + env(safe-area-inset-top, 0)); /* Adjust height to scale the image as needed */
             padding-top: env(safe-area-inset-top, 0);
             background: url('https://raw.githubusercontent.com/Sidebysidecards/Sidebyside/main/banner-image.jpg') no-repeat center center;
             background-size: contain; /* Ensures it covers the area */
             z-index: 1; /* Keeps content below the banner */
         }
         .content {
-            margin-top: calc(120px + env(safe-area-inset-top, 0)); /* Pushes content below the banner, adjust to banner size */
+            margin-top: calc(75% + env(safe-area-inset-top, 0)); /* Pushes content below the banner, adjust to banner size */
             display: flex;
             flex-direction: column;
             align-items: center;
