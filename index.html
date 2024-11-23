@@ -22,9 +22,11 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 100px; /* Adjust as needed */
+            height: auto; /* Adjust as needed */
             background: url('https://raw.githubusercontent.com/Sidebysidecards/Sidebyside/main/banner-image.jpg') no-repeat center center;
-            background-size: cover; /* Ensures it covers the area */
+            background-size: contain; /* Ensures it covers the area */
+            background-color: black; /* Adds a fallback color */
+            border-bottom: 2px solid #fff; /* Line at the bottom of the banner */
         }
         .content {
             margin-top: 120px; /* Pushes content below the banner, adjust to banner size */
@@ -36,7 +38,7 @@
             margin-bottom: 50px; /* Space between text and photo */
         }
          .photo-container img {
-            width: 15%; /* Scales the image */
+            width: 30%; /* Scales the image */
             height: auto; /* Maintians aspect ratio */
             max-width: 100%; /* Ensures it doesnt exceed container width */
             max-height: 100%; /* Ensures the height doesnt get too large */
