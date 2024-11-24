@@ -16,6 +16,7 @@
             text-align: center;
         }
         .banner {
+            position: fixed;
             top: env(safe-area-inset-top, 0); /* Adjusts for the safe area on pages */
             left: 0;
             width: 100%;
@@ -23,14 +24,18 @@
             padding-top: env(safe-area-inset-top, 0);
             background: url('https://raw.githubusercontent.com/Sidebysidecards/Sidebyside/main/banner-image.jpg') no-repeat center center;
             background-size: contain; /* Ensures it covers the area */
-            z-index: 1; /* Keeps content below the banner */
+            z-index: 10; /* Keeps content below the banner */
         }
         .button-container {
-            display: flex;
+            position: fixed;
+            top: calc(23% + env(safe-area-inset-top, 0)); /* Matches the height of the banner */
+            left: 0;
             width: 100%; /* Full width of the page */
+            display: flex;
             justify-content: space-around; /* Distributes buttons evenly */
             background-color: rgba(0, 0, 0, 0.8); /* Optional: Slight overlay */
             padding: 10px 0; /* Vertical spacing for buttons */
+            z-index: 5; /* Keeps buttons below the banner */
         }
         .button-container a {
             flex: 1; /* Ensures buttons evenly fill the container */
