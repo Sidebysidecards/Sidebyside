@@ -15,14 +15,21 @@
             font-family: Arial, sans-serif;
             text-align: center;
         }
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%; /* Ensure full height coverage */
+            width: 100%; /* Ensure full width coverage */
+            overflow-x: hidden; /* Prevent horizontal scrolling issues */
+        }
         .banner {
             border: 1px solid red;
             position: fixed;
             top: 0; /* Adjusts for the safe area on pages */
             left: 0;
             width: 100%;
-            height: calc(23% + env(safe-area-inset-top, 0)); /* Adjust height to scale the image as needed */
-            padding-top: max(0px, env(safe-area-inset-top, 0));
+            height: calc(23% + max(0px, env(safe-area-inset-top, 0))); /* Adjust height to scale the image as needed */
+            padding-top: 0;
             background: url('https://raw.githubusercontent.com/Sidebysidecards/Sidebyside/main/banner-image 2.jpg') no-repeat center center;
             background-size: contain; /* Ensures it covers the area */
             z-index: 10; /* Keeps content below the banner */
@@ -86,6 +93,7 @@
                 margin: 0;
                 padding: 0;
                 height: 100%;
+                border: 2px solid green;
             }
             .content {
                 margin-top: calc(23% + 150px); /* Increase margin for smaller screens */
