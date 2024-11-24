@@ -38,6 +38,24 @@
         .text-container {
             margin-bottom: 50px; /* Space between text and photo */
         }
+        .button-container {
+            display: flex;
+            gap: 15px; /* Adds space between the buttons */
+            margin-bottom: 50px; /* Space between buttons and photo */
+        }
+        .button-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #444; /* Dark gray buttons */
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px; /* Rounded edges */
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+        }
+        .button-container a:hover {
+            background-color: #777; /* Lighter gray on hover */
+        }
          .photo-container img {
             width: 30%; /* Scales the image */
             height: auto; /* Maintians aspect ratio */
@@ -53,6 +71,12 @@
     <div class="content">
         <div class="text-container">
             <strong>SIDE BY SIDE CARDS AND COLLECTIBLES</strong>
+        </div>
+        <div class="button-container">
+            <a href="https://www.ebay.com/usr/sidebyside_sports_cards" target="_blank">eBay</a>
+            <a href="https://www.example2.com" target="_blank">Button 2</a>
+            <a href="https://www.example3.com" target="_blank">Button 3</a>
+            <a href="https://www.example4.com" target="_blank">Button 4</a>
         </div>
         <div class="photo-container">
             <img src="https://raw.githubusercontent.com/Sidebysidecards/Sidebyside/main/Sxsnew.jpg" alt="Uploaded Photo">
