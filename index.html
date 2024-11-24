@@ -11,7 +11,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
             background-color: #000; /* Black background */
             color: #fff; /* White text for contrast */
             font-family: Arial, sans-serif;
@@ -31,6 +30,8 @@
         .button-container {
             position: absolute; /* Ensures buttons are positioned relative to the banner */
             bottom: 0; /* Attaches buttons to the bottom of the banner */
+            left: 0;
+            width: 100%; /* Buttons span the page */
             display: flex;
             justify-content: space-around; /* Button distribution evenly without spacing */
             margin-bottom: 50px; /* Space between buttons and photo */
@@ -39,8 +40,7 @@
         .button-container a {
             flex: 1; /* Ensures buttons evenly fill the container */
             text-align: center; /* Centers text in the buttons */
-            display: inline-block;
-            padding: 10px 20px;
+            padding: 15px 0;
             background-color: #444; /* Dark gray buttons */
             color: #fff;
             text-decoration: none;
@@ -60,7 +60,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            z-index: 0;
         }
         .text-container {
             margin-bottom: 50px; /* Space between text and photo */
