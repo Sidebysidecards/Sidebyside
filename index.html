@@ -28,6 +28,33 @@
             background-size: contain; /* Ensures it covers the area */
             z-index: 1; /* Keeps content below the banner */
         }
+        .button-container {
+            position: absolute; /* Ensures buttons are positioned relative to the banner */
+            bottom: 0; /* Attaches buttons to the bottom of the banner */
+            display: flex;
+            justify-content: space-around; /* Button distribution evenly without spacing */
+            margin-bottom: 50px; /* Space between buttons and photo */
+            background-color: rgba(0, 0, 0, 0.8); /* Optional: Add a slight overlay for contrast */
+        }
+        .button-container a {
+            flex: 1; /* Ensures buttons evenly fill the container */
+            text-align: center; /* Centers text in the buttons */
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #444; /* Dark gray buttons */
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            border: none;
+            border-right: 1px solid #000 /* Divider between buttons */
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+        }
+        .button-container a:last-child {
+            border-right: none; /* Removes border from last button */
+        }
+        .button-container a:hover {
+            background-color: #777; /* Lighter gray on hover */
+        }
         .content {
             margin-top: calc(23% + env(safe-area-inset-top, 0)); /* Pushes content below the banner, adjust to banner size */
             display: flex;
@@ -37,24 +64,6 @@
         }
         .text-container {
             margin-bottom: 50px; /* Space between text and photo */
-        }
-        .button-container {
-            display: flex;
-            gap: 15px; /* Adds space between the buttons */
-            margin-bottom: 50px; /* Space between buttons and photo */
-        }
-        .button-container a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #444; /* Dark gray buttons */
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-            border-radius: 5px; /* Rounded edges */
-            transition: background-color 0.3s ease; /* Smooth hover effect */
-        }
-        .button-container a:hover {
-            background-color: #777; /* Lighter gray on hover */
         }
          .photo-container img {
             width: 30%; /* Scales the image */
@@ -67,16 +76,17 @@
     </style>
 </head>
 <body>
-    <div class="banner"></div>
-    <div class="content">
-        <div class="text-container">
-            <strong>SIDE BY SIDE CARDS AND COLLECTIBLES</strong>
-        </div>
+    <div class="banner">
         <div class="button-container">
             <a href="https://www.ebay.com/usr/sidebyside_sports_cards" target="_blank">eBay</a>
             <a href="https://www.example2.com" target="_blank">Button 2</a>
             <a href="https://www.example3.com" target="_blank">Button 3</a>
             <a href="https://www.example4.com" target="_blank">Button 4</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="text-container">
+            <strong>SIDE BY SIDE CARDS AND COLLECTIBLES</strong>
         </div>
         <div class="photo-container">
             <img src="https://raw.githubusercontent.com/Sidebysidecards/Sidebyside/main/Sxsnew.jpg" alt="Uploaded Photo">
