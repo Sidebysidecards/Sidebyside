@@ -17,7 +17,7 @@
             text-align: center;
         }
         .banner {
-            position: fixed; /* Banner fixed to top */
+            position: relative; /* Allows content to flow below it */
             top: env(safe-area-inset-top, 0); /* Adjusts for the safe area on pages */
             left: 0;
             width: 100%;
@@ -28,29 +28,26 @@
             z-index: 1; /* Keeps content below the banner */
         }
         .button-container {
-            position: absolute; /* Ensures buttons are positioned relative to the banner */
-            bottom: 0; /* Attaches buttons to the bottom of the banner */
-            left: 0;
-            width: 100%; /* Buttons span the page */
             display: flex;
-            justify-content: space-around; /* Button distribution evenly without spacing */
-            margin-bottom: 50px; /* Space between buttons and photo */
-            background-color: rgba(0, 0, 0, 0.8); /* Optional: Add a slight overlay for contrast */
+            width: 100%; /* Full width of the page */
+            justify-content: space-around; /* Distributes buttons evenly */
+            background-color: rgba(0, 0, 0, 0.8); /* Optional: Slight overlay */
+            padding: 10px 0; /* Vertical spacing for buttons */
         }
         .button-container a {
             flex: 1; /* Ensures buttons evenly fill the container */
-            text-align: center; /* Centers text in the buttons */
+            text-align: center; /* Centers text in the button */
             padding: 15px 0;
             background-color: #444; /* Dark gray buttons */
             color: #fff;
             text-decoration: none;
             font-size: 16px;
-            border: none;
-            border-right: 1px solid #000 /* Divider between buttons */
+            border: none; /* Removes any default borders */
+            border-right: 1px solid #000; /* Adds a divider between buttons */
             transition: background-color 0.3s ease; /* Smooth hover effect */
         }
         .button-container a:last-child {
-            border-right: none; /* Removes border from last button */
+            border-right: none; /* Removes border from the last button */
         }
         .button-container a:hover {
             background-color: #777; /* Lighter gray on hover */
@@ -75,13 +72,12 @@
     </style>
 </head>
 <body>
-    <div class="banner">
-        <div class="button-container">
-            <a href="https://www.ebay.com/usr/sidebyside_sports_cards" target="_blank">eBay</a>
-            <a href="https://www.example2.com" target="_blank">Button 2</a>
-            <a href="https://www.example3.com" target="_blank">Button 3</a>
-            <a href="https://www.example4.com" target="_blank">Button 4</a>
-        </div>
+    <div class="banner"></div>
+    <div class="button-container">
+         <a href="https://www.ebay.com/usr/sidebyside_sports_cards" target="_blank">eBay</a>
+         <a href="https://www.example2.com" target="_blank">Button 2</a>
+          <a href="https://www.example3.com" target="_blank">Button 3</a>
+          <a href="https://www.example4.com" target="_blank">Button 4</a>
     </div>
     <div class="content">
         <div class="text-container">
