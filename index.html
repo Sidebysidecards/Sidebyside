@@ -34,13 +34,13 @@
             display: flex;
             justify-content: space-around; /* Distributes buttons evenly */
             background-color: rgba(0, 0, 0, 0.8); /* Optional: Slight overlay */
-            padding: 10px 0; /* Vertical spacing for buttons */
+            padding: 1px 0; /* Vertical spacing for buttons */
             z-index: 5; /* Keeps buttons below the banner */
         }
         .button-container a {
             flex: 1; /* Ensures buttons evenly fill the container */
             text-align: center; /* Centers text in the button */
-            padding: 15px 0;
+            padding: 1px 0;
             background-color: #111; /* Dark gray buttons */
             color: #fff;
             text-decoration: none;
@@ -48,6 +48,7 @@
             border: none; /* Removes any default borders */
             border-right: 1px solid #000; /* Adds a divider between buttons */
             transition: background-color 0.3s ease; /* Smooth hover effect */
+            margin: 0; /* Removes any spacing around the buttons */
         }
         .button-container a:last-child {
             border-right: none; /* Removes border from the last button */
@@ -83,7 +84,7 @@
                 font-size: 14px; /* Optional: Adjust font size for better readability on small screens */
             }
             .button-container {
-                top: calc(23% + env(safe-area-inset-top, 0) - 35px); /* Fine-tuned for mobile */
+                top: calc(23% + env(safe-area-inset-top, 0) - 42px); /* Fine-tuned for mobile */
             }
         }
 </style>
