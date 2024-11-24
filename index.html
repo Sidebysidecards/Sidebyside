@@ -56,7 +56,7 @@
             background-color: #222; /* Lighter gray on hover */
         }
         .content {
-            margin-top: calc(23% + env(safe-area-inset-top, 0)); /* Pushes content below the banner, adjust to banner size */
+            margin-top: calc(23% + 50px); /* Pushes content below the bannerand buttons, adjust as needed */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -73,6 +73,15 @@
             display: block;
             margin: 0 auto; /* Centers the image horizontally */
             z-index: 0;
+        }
+        /* Media Query for Mobile Devices */
+        @media (max-width: 768px) {
+            .content {
+                margin-top: calc(23% + 60px); /* Increase margin for smaller screens */
+            }
+            .text-container {
+                font-size: 14px; /* Optional: Adjust font size for better readability on small screens */
+            }
         }
     </style>
 </head>
