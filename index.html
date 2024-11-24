@@ -16,6 +16,7 @@
             text-align: center;
         }
         .banner {
+            border: 1px solid red;
             position: fixed;
             top: env(safe-area-inset-top, 0); /* Adjusts for the safe area on pages */
             left: 0;
@@ -79,7 +80,7 @@
         @media (max-width: 768px) {
             .banner {
                 top: 0;
-                padding-top: env(safe-area-inset-top, 0);
+                padding-top: 0;
             }
             .content {
                 margin-top: calc(23% + 150px); /* Increase margin for smaller screens */
