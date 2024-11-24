@@ -34,13 +34,13 @@
             display: flex;
             justify-content: space-around; /* Distributes buttons evenly */
             background-color: rgba(0, 0, 0, 0.8); /* Optional: Slight overlay */
-            padding: 1px 0; /* Vertical spacing for buttons */
+            height: 50px; /* Vertical spacing for buttons */
             z-index: 5; /* Keeps buttons below the banner */
         }
         .button-container a {
             flex: 1; /* Ensures buttons evenly fill the container */
             text-align: center; /* Centers text in the button */
-            padding: 1px 0;
+            line-height: 50px;
             background-color: #111; /* Dark gray buttons */
             color: #fff;
             text-decoration: none;
@@ -48,7 +48,7 @@
             border: none; /* Removes any default borders */
             border-right: 1px solid #000; /* Adds a divider between buttons */
             transition: background-color 0.3s ease; /* Smooth hover effect */
-            /*margin: 0; /* Removes any spacing around the buttons */
+            margin: 0; /* Removes any spacing around the buttons */
         }
         .button-container a:last-child {
             border-right: none; /* Removes border from the last button */
@@ -84,10 +84,15 @@
                 font-size: 14px; /* Optional: Adjust font size for better readability on small screens */
             }
             .button-container {
-                top: calc(23% + env(safe-area-inset-top, 0) - 32px); /* Fine-tuned for mobile */
+                top: calc(23% + env(safe-area-inset-top, 0) - 33px); /* Fine-tuned for mobile */
+                height: 50px; /* Consistent button height for mobile */           
             }
-        }
-</style>
+            .button-container a {
+                line-height: 50px; /* Maintain vertical centering for mobile */
+                font-size: 14px; /* Slightly smaller text for smaller screens */
+            }   
+        }  
+    </style>
 </head>
 <body>
     <div class="banner"></div>
