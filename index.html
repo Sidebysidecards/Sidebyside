@@ -18,11 +18,11 @@
         .banner {
             border: 1px solid red;
             position: fixed;
-            top: env(safe-area-inset-top, 0); /* Adjusts for the safe area on pages */
+            top: 0; /* Adjusts for the safe area on pages */
             left: 0;
             width: 100%;
             height: calc(23% + env(safe-area-inset-top, 0)); /* Adjust height to scale the image as needed */
-            padding-top: env(safe-area-inset-top, 0);
+            padding-top: 0;
             background: url('https://raw.githubusercontent.com/Sidebysidecards/Sidebyside/main/banner-image 2.jpg') no-repeat center center;
             background-size: contain; /* Ensures it covers the area */
             z-index: 10; /* Keeps content below the banner */
