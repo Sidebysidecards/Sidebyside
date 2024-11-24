@@ -101,7 +101,21 @@
             .button-container a {
                 line-height: 50px; /* Maintain vertical centering for mobile */
                 font-size: 14px; /* Slightly smaller text for smaller screens */
-            }   
+            }
+            @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+            /* Adjust the banner's top position if there's a gap on iPads */
+                .banner {
+                    top: 0; /* Adjust as needed, this could be a negative value if you want to move it up */
+                }
+            /* Adjust the space between the banner and button container */
+                .button-container {
+                    top: calc(23% + 0px); /* Adjust this value to remove any gap between the banner and buttons */
+                }
+            /* Optional: Adjust content's margin for iPad portrait mode if necessary */
+                .content {
+                    margin-top: calc(23% + 50px); /* Adjust based on the actual height of your buttons */
+                }
+            }
         }  
     </style>
 </head>
