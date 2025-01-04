@@ -84,14 +84,24 @@
         @media all and (display-mode: standalone) {
             /* This is for when adding the website to the homescreen on ios */
             .banner {
-                top: env(safe-area-inset-top, 0); 
+                position: fixed;
+                top: calc(23% + env(safe-area-inset-top, 0)); 
                 height: calc(23% + env(safe-area-inset-top, 0));
+                z-index: 10;
+                border: 2px solid red;
             }
             .button-container {
+                position: fixed;
                 top: calc(23% + env(safe-area-inset-top, 0));
+                height: 50px;
+                display: flex;
+                justify-content: space-around;
+                z-index: 5;
+                border: 2px solid green;
             }
             .content {
                 margin-top: calc(23% + 50px + env(safe-area-inset-top, 0));
+                padding-bottom: env(safe-area-inset-bottom, 0);
             }
         }
         @media (max-width: 768px) {
