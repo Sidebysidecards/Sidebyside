@@ -80,6 +80,25 @@
             margin: 0 auto; /* Centers the image horizontally */
             z-index: 0;
         }
+        .photo-link-container {
+            width: 30%;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+        }  
+        .clickable-photo {
+            width: 80%;
+            max-width: 400px;
+            height: auto;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .clickable-photo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+        }
+        
         /* Media Query for Mobile Devices */
         @media all and (display-mode: standalone) {
             /* This is for when adding the website to the homescreen on ios */
@@ -144,25 +163,7 @@
             /* Optional: Adjust content's margin for iPad portrait mode if necessary */
             .content {
                 margin-top: calc(23% + 80px); /* Adjust based on the actual height of your buttons */
-            }
-        .photo-link-container {
-            margin: 20px 0;
-            display: flex;
-            justify-content: center;
-        }  
-        .clickable-photo {
-            width: 80%;
-            max-width: 400px;
-            height: auto;
-            border: 2px solid #fff;
-            border-radius: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .clickable-photo:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
-        }
-        
+            }        
     </style>
 </head>
 <body>
@@ -182,7 +183,7 @@
         </div>
         <div class="photo-link-container">
                 <a href="https://www.ebay.com/itm/205205430902" target="_blank">
-                    <img src="https://raw.githubusercontent.com/Sidebysidecards/Sidebyside/main/curry.jpg" alt="Uploaded Photo">
+                    <img src="https://raw.githubusercontent.com/Sidebysidecards/Sidebyside/main/curry.jpg" alt="Clickable Photo" class="clickable-photo">
                 </a>
         </div>
     </div>
