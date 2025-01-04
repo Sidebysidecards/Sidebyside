@@ -81,6 +81,19 @@
             z-index: 0;
         }
         /* Media Query for Mobile Devices */
+        @media all and (display-mode: standalone) {
+            /* This is for when adding the website to the homescreen on ios */
+            .banner {
+                top: env(safe-area-inset-top, 0); 
+                height: calc(23% + env(safe-area-inset-top, 0));
+            }
+            .button-container {
+                top: calc(23% + env(safe-area-inset-top, 0));
+            }
+            .content {
+                margin-top: calc(23% + 50px + env(safe-area-inset-top, 0));
+            }
+        }
         @media (max-width: 768px) {
             .banner {
                 top: -35px;
