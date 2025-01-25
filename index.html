@@ -20,7 +20,7 @@
             text-align: center;
         }
         .banner {
-            border: 5px solid black;
+            /*border: 5px solid black;*/
             position: fixed;
             top: 0; /* Adjusts for the safe area on pages */
             left: 0;
@@ -32,7 +32,7 @@
             z-index: 10; /* Keeps content below the banner */
         }
         .content {
-            margin-top: calc(23% + 25px); /* Pushes content below the bannerand buttons, adjust as needed */
+            margin-top: calc(18% + 25px); /* Pushes content below the bannerand buttons, adjust as needed */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -83,6 +83,11 @@
             .content {
                 margin-top: calc(23% + 50px + env(safe-area-inset-top, 0));
                 padding-bottom: env(safe-area-inset-bottom, 0);
+            }
+        }
+        @media (min-width: 1024px) {
+            .content {
+                margin-top: calc(15% + 20px); /* Move content higher on larger screens */
             }
         }
         @media (max-width: 768px) {
