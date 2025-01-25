@@ -31,36 +31,6 @@
             background-size: contain; /* Ensures it covers the area */
             z-index: 10; /* Keeps content below the banner */
         }
-        .button-container {
-            position: fixed;
-            top: calc(23% + env(safe-area-inset-top, 0)); /* Matches the height of the banner */
-            left: 0;
-            width: 100%; /* Full width of the page */
-            display: flex;
-            justify-content: space-around; /* Distributes buttons evenly */
-            background-color: rgba(0, 0, 0, 0.8); /* Optional: Slight overlay */
-            height: 50px; /* Vertical spacing for buttons */
-            z-index: 5; /* Keeps buttons below the banner */
-        }
-        .button-container a {
-            flex: 1; /* Ensures buttons evenly fill the container */
-            text-align: center; /* Centers text in the button */
-            line-height: 50px;
-            background-color: #111; /* Dark gray buttons */
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-            border: none; /* Removes any default borders */
-            border-right: 1px solid #000; /* Adds a divider between buttons */
-            transition: background-color 0.3s ease; /* Smooth hover effect */
-            margin: 0; /* Removes any spacing around the buttons */
-        }
-        .button-container a:last-child {
-            border-right: none; /* Removes border from the last button */
-        }
-        .button-container a:hover {
-            background-color: #222; /* Lighter gray on hover */
-        }
         .content {
             margin-top: calc(23% + 50px); /* Pushes content below the bannerand buttons, adjust as needed */
             display: flex;
@@ -110,15 +80,6 @@
                 z-index: 10;
                 border: 2px solid red;
             }
-            .button-container {
-                position: fixed;
-                top: calc(23% + env(safe-area-inset-top, 0));
-                height: 50px;
-                display: flex;
-                justify-content: space-around;
-                z-index: 5;
-                border: 2px solid green;
-            }
             .content {
                 margin-top: calc(23% + 50px + env(safe-area-inset-top, 0));
                 padding-bottom: env(safe-area-inset-bottom, 0);
@@ -141,25 +102,12 @@
             .text-container {
                 font-size: 14px; /* Optional: Adjust font size for better readability on small screens */
             }
-            .button-container {
-                top: calc(23% + env(safe-area-inset-top, 0) - 68px); /* Fine-tuned for mobile */
-                height: 50px; /* Consistent button height for mobile */           
-            }
-            .button-container a {
-                line-height: 50px; /* Maintain vertical centering for mobile */
-                font-size: 14px; /* Slightly smaller text for smaller screens */
-            }
         }
         @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
             /* Adjust the banner's top position if there's a gap on iPads */
             .banner {
                 top: -43px; /* Adjust as needed, this could be a negative value if you want to move it up */
                 /*border: 1px solid red;*/
-            }
-            /* Adjust the space between the banner and button container */
-            .button-container {
-                top: calc(23% + -85px); /* Adjust this value to remove any gap between the banner and buttons */
-                /*border: 2px solid green;*/
             }
             /* Optional: Adjust content's margin for iPad portrait mode if necessary */
             .content {
@@ -169,12 +117,6 @@
 </head>
 <body>
     <div class="banner"></div>
-    <div class="button-container">
-         <a href="https://www.ebay.com/usr/sidebyside_sports_cards" target="_blank">eBay</a>
-         <a href="https://www.tcgplayer.com/search/all/product?seller=e0db243d" target="_blank">TCGPlayer</a>
-         <a href="https://www.example3.com" target="_blank">Button 3</a>
-         <a href="https://www.example4.com" target="_blank">Button 4</a>
-    </div>
     <div class="content">
         <div class="text-container">
             <strong>SideBySide Cards and Collectibles! We sell NBA trading cards, Magic the Gathering, and Pokemon!</strong>
